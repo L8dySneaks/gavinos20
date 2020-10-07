@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'gavinos-fe';
+  title = 'Special #1';
+
+  onLike() {
+        window.alert(`I like ${this.title}`);
+  }
 }
