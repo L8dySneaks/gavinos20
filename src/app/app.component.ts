@@ -6,9 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Special #1';
 
-  onLike() {
-        window.alert(`I like ${this.title}`);
-  }
 }

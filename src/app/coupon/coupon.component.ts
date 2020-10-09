@@ -8,9 +8,6 @@ import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } fro
 })
 export class CouponComponent implements OnInit {
 
-  @Input() deal: string;
-  @Output() liked = new EventEmitter<boolean>();
-
   constructor() { }
 
   ngOnInit(): void {
