@@ -1,11 +1,73 @@
 <!-- Header -->
-<mat-toolbar>
+<!-- <mat-toolbar>
   <span>Gavino's Pizzeria</span>
 </mat-toolbar>
 
 
 <h1>This should be the homepage</h1>
-<p> Right now this will be a test page for the coupons</p>
+<p> Right now this will be a test page for the coupons</p> -->
 
 
-<app-coupon></app-coupon>
+<!-- Coupon template - This should become it's own component -->
+<div class="p-d-flex p-flex-column p-flex-md-row">
+  <div class="p-mb-4">
+    <app-coupon *ngFor="let coupon of coupons"></app-coupon>
+  </div>
+  <!-- <div class="p-mb-4"><app-coupon></app-coupon></div>
+  <div class="p-mb-4"><app-coupon></app-coupon></div> -->
+</div>
+
+<!-- <p>{{ couponCreationStatus }} </p> -->
+
+<button pButton pRipple
+  type="button"
+  label="Add Coupon"
+  class="p-button-raised p-button-help"
+  [disabled]="!allowNewCoupon"
+  (click)="onCreateCoupon()"></button>
+
+  <p *ngIf="couponCreated">Coupon was created, coupon deal is {{ couponName }}</p>
+
+
+
+  <label>Coupon Name</label>
+  <!-- <input
+    type="text"
+    class="form-control"
+    (input)="onUpdateCouponName($event)">
+    <p>{{ couponName }}</p> -->
+
+    <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="couponName">
+    <!-- <p>{{ couponName }}</p> -->
+
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="username">
+    <p>{{ username }}</p>
+
+  <button pButton pRipple
+  type="button"
+  label="Reset Username"
+  class="p-button-raised p-button-help"
+  [disabled]="!username"
+  (click)="onResetUsername()"></button>
+
+
+<hr>
+
+
+<button pButton pRipple
+type="button"
+label="Toggle Details"
+class="p-button-raised p-button-warning"
+(click)="onToggleDetails()"></button>
+
+<p *ngIf="showDetails">Coupon deal = 2.99</p>
+<div
+*ngFor="let logItem of log; let i = index"
+[ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+[ngClass]="{'white-text': i >= 4}">{{ logItem }}</div>
