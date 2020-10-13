@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
+import { Coupon } from '../coupon.model';
 
 @Component({
   selector: 'app-coupon',
@@ -8,25 +9,21 @@ import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } fro
 })
 export class CouponComponent implements OnInit {
 
-  couponTitle = 'Special #1';
-  couponDeal = 'HALF CLASSIC HOAGIE WITH FRIES & CAN OF POP';
+  coupons: Coupon[] = [
+    new Coupon('Special #2', 'HALF CLASSIC HOAGIE WITH FRIES & CAN OF POP', '(Excludes Supreme)', 9.29),
+    new Coupon('Special #1', 'SMALL PIZZA WITH 1 TOPPING & CAN OF POP', '', 9.29),
+  ];
 
-
+  // couponTitle = 'Special #1';
+  // couponDeal = 'HALF CLASSIC HOAGIE WITH FRIES & CAN OF POP';
 
   constructor() {
-    this.couponDeal = Math.random() > 0.5 ? 'great deal' : 'shitty deal';
-    console.log(Math.random());
+
   }
 
   ngOnInit(): void {
   }
 
-  getCouponDeal() {
-    return this.couponDeal;
-  }
 
-  getColor() {
-    return this.couponDeal === 'great deal' ? 'green' : 'red';
-  }
 
 }

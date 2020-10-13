@@ -1,4 +1,6 @@
 <!-- Header -->
+<app-header></app-header>
+
 <!-- <mat-toolbar>
   <span>Gavino's Pizzeria</span>
 </mat-toolbar>
@@ -9,65 +11,42 @@
 
 
 <!-- Coupon template - This should become it's own component -->
-<div class="p-d-flex p-flex-column p-flex-md-row">
+<!-- <div class="p-d-flex p-flex-column p-flex-md-row">
   <div class="p-mb-4">
-    <app-coupon *ngFor="let coupon of coupons"></app-coupon>
-  </div>
+    <app-coupon></app-coupon>
+  </div> -->
   <!-- <div class="p-mb-4"><app-coupon></app-coupon></div>
   <div class="p-mb-4"><app-coupon></app-coupon></div> -->
+<!-- </div> -->
+
+
+<!-- <div class="p-d-flex">
+  <div class="p-mr-2">Item 1</div>
+  <div class="p-mr-2">Item 2</div>
+  <div>Item 3</div>
 </div>
 
-<!-- <p>{{ couponCreationStatus }} </p> -->
 
-<button pButton pRipple
+
+<div class="p-d-flex p-flex-column p-flex-md-row">
+  <div class="p-mb-2 p-mr-2">Item 1</div>
+  <div class="p-mb-2 p-mr-2">Item 2</div>
+  <div class="p-mb-2 p-mr-2">Item 3</div>
+</div> -->
+
+
+<!-- <button pButton pRipple
   type="button"
   label="Add Coupon"
   class="p-button-raised p-button-help"
   [disabled]="!allowNewCoupon"
-  (click)="onCreateCoupon()"></button>
+  (click)="onCreateCoupon()"></button> -->
 
-  <p *ngIf="couponCreated">Coupon was created, coupon deal is {{ couponName }}</p>
-
-
-
-  <label>Coupon Name</label>
-  <!-- <input
-    type="text"
-    class="form-control"
-    (input)="onUpdateCouponName($event)">
-    <p>{{ couponName }}</p> -->
-
-    <input
-    type="text"
-    class="form-control"
-    [(ngModel)]="couponName">
-    <!-- <p>{{ couponName }}</p> -->
-
-    <input
-      type="text"
-      class="form-control"
-      [(ngModel)]="username">
-    <p>{{ username }}</p>
-
-  <button pButton pRipple
-  type="button"
-  label="Reset Username"
-  class="p-button-raised p-button-help"
-  [disabled]="!username"
-  (click)="onResetUsername()"></button>
+<!--
+  TODO: Create a model for the coupons
+  TODO: Create a model for store hours
+  TODO: Create a model for each of the different menu items, this is probably going to be the most difficult
+-->
 
 
-<hr>
-
-
-<button pButton pRipple
-type="button"
-label="Toggle Details"
-class="p-button-raised p-button-warning"
-(click)="onToggleDetails()"></button>
-
-<p *ngIf="showDetails">Coupon deal = 2.99</p>
-<div
-*ngFor="let logItem of log; let i = index"
-[ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
-[ngClass]="{'white-text': i >= 4}">{{ logItem }}</div>
+<app-coupon-list></app-coupon-list>
