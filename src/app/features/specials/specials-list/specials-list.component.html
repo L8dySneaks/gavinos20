@@ -1,6 +1,14 @@
-<h3>Specials</h3>
+<!-- <h3>Specials</h3>
 <ul>
   <li *ngFor="let special of specials">
     <p [id]="special.id">{{ special.deal }}</p>
+  </li>
+</ul> -->
+
+
+<h3>Specials</h3>
+<ul>
+  <li *ngFor="let special of specials">
+    <app-special-detail [id]="special.id"></app-special-detail>
   </li>
 </ul>
