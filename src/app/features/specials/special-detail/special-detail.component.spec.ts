@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CouponListComponent } from './coupon-list.component';
+import { SpecialDetailComponent } from './special-detail.component';
 
-describe('CouponListComponent', () => {
-  let component: CouponListComponent;
-  let fixture: ComponentFixture<CouponListComponent>;
+describe('SpecialDetailComponent', () => {
+  let component: SpecialDetailComponent;
+  let fixture: ComponentFixture<SpecialDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CouponListComponent ]
+      declarations: [ SpecialDetailComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CouponListComponent);
+    fixture = TestBed.createComponent(SpecialDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
