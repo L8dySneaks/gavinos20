@@ -13,10 +13,12 @@ import { ButtonModule } from 'primeng/button';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './shared/header/header.component';
 import { ToolbarModule } from 'primeng/toolbar';
+import { KeyLoggerComponent } from './features/key-logger/key-logger.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    KeyLoggerComponent
   ],
   imports: [
     BrowserModule,
